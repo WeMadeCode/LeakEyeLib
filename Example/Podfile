@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LeakEyeLib_Example' do
+  pod 'LeakEyeLib', :path => '../'
+
+  target 'LeakEyeLib_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
