@@ -60,6 +60,14 @@ func leakEye(leakEye:LeakEye,didCatchLeak object:NSObject) {
 3. 支持iOS10+
 
 
+# 原理
+
+LeakEyeLib基于这样一个假设：
+> 如果Controller被释放了，但其曾经持有过的子对象如果还存在，那么这些子对象就是泄漏的可疑目标。
+
+那么怎么在Controller被释放之后，知道其持有的对象没有被释放呢:
+**子对象（比如view）建立一个对controller的weak引用，如果Controller被释放，这个weak引用也随之置为nil。那怎么知道子对象没有被释放呢？用一个实例对象每个一小段时间（0.5秒）发出一个ping通知去ping这个子对象，如果子对象还活着就会一个ping通知。所以结论就是：如果子对象的controller已不存在，但还能响应这个ping通知，那么这个对象就是可疑的泄漏对象。**
+
 
 ## 许可证
 MIT
