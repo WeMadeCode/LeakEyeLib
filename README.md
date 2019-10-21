@@ -5,44 +5,44 @@
 [![License](https://img.shields.io/cocoapods/l/LeakEyeLib.svg?style=flat)](https://cocoapods.org/pods/LeakEyeLib)
 [![Platform](https://img.shields.io/cocoapods/p/LeakEyeLib.svg?style=flat)](https://cocoapods.org/pods/LeakEyeLib)
 
-## Example
+## 例子
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+下载本仓库，在Example文件夹中有Demo工程，可以直接运行检查效果。
 
-## Requirements
 
-iOS10+
+## 需要
 
-## Installation
+最低支持iOS10
 
-LeakEyeLib is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 安装
+
+通过cocoapods可以直接安装
 
 ```ruby
 pod 'LeakEyeLib'
 ```
 
-## Usage
-Import the lib:
+## 使用
+第一步：导入框架
 
 ```swift
 import LeakEyeLib
 ```
 
-Declare an instance variable：
+第二步：声明实例属性
 
 ```swift
 var eye = LeakEye()
 ```
 
-Start monitor:
+第三步：开启监听器
 
 ```swift
 self.eye.delegate = self
-self.eye.start()
+self.eye.open()
 ```
 
-Implement the delegate:
+第四步：实现代理方法，方法中会输出可疑的泄漏对象
 
 ```swift
 func leakEye(leakEye:LeakEye,didCatchLeak object:NSObject) {
@@ -50,13 +50,17 @@ func leakEye(leakEye:LeakEye,didCatchLeak object:NSObject) {
 }
 ```
 
-that's all
+## 感谢
+本仓库是在[LeakEye](https://github.com/zixun/LeakEye)上继续维护的，由于LeakEye年久失修，原作者貌似也不在维护，可惜这么牛逼的框架没人用，所以在学习了原作者的思想之后，打算继续维护。
 
 
-## Thanks
-Thanks for [LeakEye](https://github.com/zixun/LeakEye),LeakEyeLib is inspired by it.
+## 目前在LeakEye基础上改了啥？
+1. 修复了iOS13上的崩溃
+2. 升级到Swift5，修复一些warnings
+3. 支持iOS10+
 
 
-## License
 
-LeakEyeLib is available under the MIT license. See the LICENSE file for more info.
+## 许可证
+MIT
+
