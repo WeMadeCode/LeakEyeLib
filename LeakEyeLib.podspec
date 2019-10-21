@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 Swift版本的内存泄漏检测工具，在LeakEye的基础上继续维护。
                        DESC
 
-  s.homepage         = 'https://github.com/zhouxiang/LeakEyeLib'
+  s.homepage         = 'https://github.com/WeMadeCode/LeakEyeLibb'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhouxiang' => 'zhouxiang@huami.com' }
-  s.source           = { :git => 'https://github.com/zhouxiang/LeakEyeLib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:WeMadeCode/LeakEyeLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
