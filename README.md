@@ -23,7 +23,7 @@ pod 'LeakEyeLib'
 ```
 
 ## 使用
-第一步：导入框架
+第一步：导入框架
 
 ```swift
 import LeakEyeLib
