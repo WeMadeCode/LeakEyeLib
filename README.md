@@ -35,7 +35,7 @@ import LeakEyeLib
 var eye = LeakEye()
 ```
 
-第三步：开启监听器
+第三步：开启监听器
 
 ```swift
 self.eye.delegate = self
