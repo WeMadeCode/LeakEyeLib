@@ -8,8 +8,6 @@
 
 import Foundation
 
-import ObjectiveC
-
 public enum SwizzleResult {
     case Succeed
     case OriginMethodNotFound
