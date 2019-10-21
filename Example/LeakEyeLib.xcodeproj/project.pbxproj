@@ -17,6 +17,7 @@
 		BAA6D15939098A63329E2B45 /* Pods_LeakEyeLib_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD00703BBD87D15AEDB89BE2 /* Pods_LeakEyeLib_Tests.framework */; };
 		C4136900235D7EB30017EDF0 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41368FF235D7EB30017EDF0 /* Test2ViewController.swift */; };
 		C43D9031235D663B00FB0F45 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D9030235D663B00FB0F45 /* TestViewController.swift */; };
+		C4F0CAB7235DDB480031AB33 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0CAB6235DDB480031AB33 /* Test3ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,9 @@
 		A51A44008E00C71E42A95979 /* Pods_LeakEyeLib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeakEyeLib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41368FF235D7EB30017EDF0 /* Test2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		C43D9030235D663B00FB0F45 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C4F0CAB4235DDB480031AB33 /* LeakEyeLib_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeakEyeLib_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		C4F0CAB5235DDB480031AB33 /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
+		C4F0CAB6235DDB480031AB33 /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
 		E80C114DA36AB8FB7F2970DC /* Pods-LeakEyeLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeakEyeLib_Tests.release.xcconfig"; path = "Target Support Files/Pods-LeakEyeLib_Tests/Pods-LeakEyeLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F27848BAD0EAD412AC87DF10 /* Pods-LeakEyeLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeakEyeLib_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LeakEyeLib_Tests/Pods-LeakEyeLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD00703BBD87D15AEDB89BE2 /* Pods_LeakEyeLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeakEyeLib_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,10 +116,13 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				C43D9030235D663B00FB0F45 /* TestViewController.swift */,
 				C41368FF235D7EB30017EDF0 /* Test2ViewController.swift */,
+				C4F0CAB5235DDB480031AB33 /* Test3ViewController.h */,
+				C4F0CAB6235DDB480031AB33 /* Test3ViewController.m */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				C4F0CAB4235DDB480031AB33 /* LeakEyeLib_Example-Bridging-Header.h */,
 			);
 			name = "Example for LeakEyeLib";
 			path = LeakEyeLib;
@@ -218,7 +225,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1110;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -339,6 +346,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				C4136900235D7EB30017EDF0 /* Test2ViewController.swift in Sources */,
 				C43D9031235D663B00FB0F45 /* TestViewController.swift in Sources */,
+				C4F0CAB7235DDB480031AB33 /* Test3ViewController.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,12 +501,15 @@
 			baseConfigurationReference = 5E2F5E2F01518E961B2545D8 /* Pods-LeakEyeLib_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LeakEyeLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeakEyeLib/LeakEyeLib_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -509,12 +520,14 @@
 			baseConfigurationReference = 42D925076F9D8A05DB17565E /* Pods-LeakEyeLib_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LeakEyeLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeakEyeLib/LeakEyeLib_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};

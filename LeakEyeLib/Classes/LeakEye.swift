@@ -9,20 +9,20 @@
 import Foundation
 
 /// MARK: - LeakEyeDelegate
-public protocol LeakEyeDelegate: NSObjectProtocol {
+@objc public protocol LeakEyeDelegate: NSObjectProtocol {
     func leakEye(_ leakEye:LeakEye,didCatchLeak object:NSObject)
 }
 
 /// MARK: - LeakEye
-open class LeakEye: NSObject {
+public class LeakEye: NSObject {
     /// 代理属性，用于输出泄漏的对象
-    open weak var delegate: LeakEyeDelegate?
+    @objc public weak var delegate: LeakEyeDelegate?
     
     /// 用于扫描的定时器
     private var timer: Timer?
     
     /// 判断检查内存泄漏工具是否开启
-    open var isOpening: Bool {
+    public var isOpening: Bool {
         get {
             return self.timer?.isValid ?? false
         }
@@ -36,14 +36,14 @@ open class LeakEye: NSObject {
     
 
     /// 开启内存泄漏检测工具
-    open func open() {
+    public func open() {
         Preparer.binding()
         self.startPingTimer()
     }
     
     
     /// 关闭内存泄漏检测工具
-    open func close() {
+    public func close() {
         self.timer?.invalidate()
         self.timer = nil
     }
