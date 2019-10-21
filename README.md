@@ -60,7 +60,7 @@ func leakEye(leakEye:LeakEye,didCatchLeak object:NSObject) {
 3. 支持iOS10+
 
 
-# 原理
+## 原理
 
 LeakEyeLib基于这样一个假设：
 > 如果Controller被释放了，但其曾经持有过的子对象如果还存在，那么这些子对象就是泄漏的可疑目标。
