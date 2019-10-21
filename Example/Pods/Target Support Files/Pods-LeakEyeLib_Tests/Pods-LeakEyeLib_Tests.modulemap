@@ -1,0 +1,6 @@
+framework module Pods_LeakEyeLib_Tests {
+  umbrella header "Pods-LeakEyeLib_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

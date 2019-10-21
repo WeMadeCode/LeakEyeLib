@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import LeakEyeLib
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
+    var eye = LeakEye()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        self.eye.delegate = self
+        self.eye.open()
+        
         // Override point for customization after application launch.
         return true
     }
@@ -42,5 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate: LeakEyeDelegate {
+    func leakEye(_ leakEye:LeakEye,didCatchLeak object:NSObject) {
+        print("对象\(object)存在内存泄漏")
+    }
 }
 

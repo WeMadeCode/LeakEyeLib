@@ -1,0 +1,16 @@
+PODS:
+  - LeakEyeLib (0.1.0)
+
+DEPENDENCIES:
+  - LeakEyeLib (from `../`)
+
+EXTERNAL SOURCES:
+  LeakEyeLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LeakEyeLib: 468acef4140de2eaf9815f54fe1e3bf7022743ef
+
+PODFILE CHECKSUM: 4d63d0eed5e4157470b5fbf40f08e6f3c2a704dc
+
+COCOAPODS: 1.8.3

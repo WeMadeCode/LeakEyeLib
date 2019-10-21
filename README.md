@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+iOS10+
+
 ## Installation
 
 LeakEyeLib is available through [CocoaPods](https://cocoapods.org). To install
@@ -20,9 +22,40 @@ it, simply add the following line to your Podfile:
 pod 'LeakEyeLib'
 ```
 
-## Author
+## Usage
+Import the lib:
 
-zhouxiang, zhouxiang@huami.com
+```swift
+import LeakEyeLib
+```
+
+Declare an instance variable：
+
+```swift
+var eye = LeakEye()
+```
+
+Start monitor:
+
+```swift
+self.eye.delegate = self
+self.eye.start()
+```
+
+Implement the delegate:
+
+```swift
+func leakEye(leakEye:LeakEye,didCatchLeak object:NSObject) {
+    print(object)
+}
+```
+
+that's all
+
+
+## Thanks
+Thanks for [LeakEye](https://github.com/zixun/LeakEye),LeakEyeLib is inspired by it.
+
 
 ## License
 
