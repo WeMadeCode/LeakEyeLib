@@ -54,7 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: LeakEyeDelegate {
     func leakEye(_ leakEye:LeakEye,didCatchLeak object:NSObject) {
-        print("对象\(object)存在内存泄漏")
+        let msg = "对象\(object)存在内存泄漏"
+        let alert = UIAlertController(title: "提示", message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "确定", style: .default, handler: nil)
+        alert.addAction(action)
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 }
 
