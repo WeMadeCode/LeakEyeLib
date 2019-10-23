@@ -14,9 +14,9 @@ import Foundation
 }
 
 /// MARK: - LeakEye
-public class LeakEye: NSObject {
+@objcMembers public class LeakEye: NSObject {
     /// 代理属性，用于输出泄漏的对象
-    @objc public weak var delegate: LeakEyeDelegate?
+    public weak var delegate: LeakEyeDelegate?
     
     /// 用于扫描的定时器
     private var timer: Timer?
@@ -43,7 +43,7 @@ public class LeakEye: NSObject {
     
     
     /// 关闭内存泄漏检测工具
-    public func close() {
+     public func close() {
         self.timer?.invalidate()
         self.timer = nil
     }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LeakEyeLib'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '内存泄漏检测工具'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 Swift版本的内存泄漏检测工具，在LeakEye的基础上继续维护。
                        DESC
 
-  s.homepage         = 'https://github.com/WeMadeCode/LeakEyeLibb'
+  s.homepage         = 'https://github.com/WeMadeCode/LeakEyeLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhouxiang' => 'zhouxiang@huami.com' }
@@ -29,8 +29,8 @@ Swift版本的内存泄漏检测工具，在LeakEye的基础上继续维护。
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
-
-  s.source_files = 'LeakEyeLib/Classes/**/*'
+  s.swift_version = '5.1'
+  s.source_files = 'LeakEyeLib/Classes/**/*.swift'
   
   # s.resource_bundles = {
   #   'LeakEyeLib' => ['LeakEyeLib/Assets/*.png']

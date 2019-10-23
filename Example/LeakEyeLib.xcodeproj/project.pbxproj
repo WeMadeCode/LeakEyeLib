@@ -17,7 +17,6 @@
 		BAA6D15939098A63329E2B45 /* Pods_LeakEyeLib_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD00703BBD87D15AEDB89BE2 /* Pods_LeakEyeLib_Tests.framework */; };
 		C4136900235D7EB30017EDF0 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41368FF235D7EB30017EDF0 /* Test2ViewController.swift */; };
 		C43D9031235D663B00FB0F45 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D9030235D663B00FB0F45 /* TestViewController.swift */; };
-		C4F0CAB7235DDB480031AB33 /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0CAB6235DDB480031AB33 /* Test3ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +49,6 @@
 		C41368FF235D7EB30017EDF0 /* Test2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		C43D9030235D663B00FB0F45 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C4F0CAB4235DDB480031AB33 /* LeakEyeLib_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeakEyeLib_Example-Bridging-Header.h"; sourceTree = "<group>"; };
-		C4F0CAB5235DDB480031AB33 /* Test3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
-		C4F0CAB6235DDB480031AB33 /* Test3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
 		E80C114DA36AB8FB7F2970DC /* Pods-LeakEyeLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeakEyeLib_Tests.release.xcconfig"; path = "Target Support Files/Pods-LeakEyeLib_Tests/Pods-LeakEyeLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F27848BAD0EAD412AC87DF10 /* Pods-LeakEyeLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeakEyeLib_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LeakEyeLib_Tests/Pods-LeakEyeLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD00703BBD87D15AEDB89BE2 /* Pods_LeakEyeLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeakEyeLib_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,8 +113,6 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				C43D9030235D663B00FB0F45 /* TestViewController.swift */,
 				C41368FF235D7EB30017EDF0 /* Test2ViewController.swift */,
-				C4F0CAB5235DDB480031AB33 /* Test3ViewController.h */,
-				C4F0CAB6235DDB480031AB33 /* Test3ViewController.m */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -346,7 +341,6 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				C4136900235D7EB30017EDF0 /* Test2ViewController.swift in Sources */,
 				C43D9031235D663B00FB0F45 /* TestViewController.swift in Sources */,
-				C4F0CAB7235DDB480031AB33 /* Test3ViewController.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
