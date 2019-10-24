@@ -33,13 +33,25 @@
                                     <action selector="btnTwoClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eEr-zu-4K0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-vu-ieL">
+                                <rect key="frame" x="36" y="224" width="53" height="30"/>
+                                <state key="normal" title="OC对象"/>
+                                <connections>
+                                    <action selector="btnThreeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="59i-g0-Ton"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KFw-UZ-mfB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="60H-01-BUj"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w1j-Y1-By3" secondAttribute="trailing" constant="20" symbolic="YES" id="6a8-19-uX0"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KFw-UZ-mfB" secondAttribute="trailing" constant="20" symbolic="YES" id="GcI-Sl-ybI"/>
+                            <constraint firstItem="fNc-vu-ieL" firstAttribute="leading" secondItem="w1j-Y1-By3" secondAttribute="leading" id="Mab-cF-rnz"/>
                             <constraint firstItem="w1j-Y1-By3" firstAttribute="leading" secondItem="KFw-UZ-mfB" secondAttribute="leading" id="TDv-SC-2w9"/>
                             <constraint firstItem="KFw-UZ-mfB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="tpk-2C-op7"/>
+                            <constraint firstItem="fNc-vu-ieL" firstAttribute="top" secondItem="w1j-Y1-By3" secondAttribute="bottom" constant="20" id="trK-tZ-NLu"/>
                             <constraint firstItem="w1j-Y1-By3" firstAttribute="top" secondItem="KFw-UZ-mfB" secondAttribute="bottom" constant="20" id="wNL-hJ-nfB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fNc-vu-ieL" secondAttribute="trailing" constant="20" symbolic="YES" id="xYZ-hD-sSB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3xi-Pe-kf6"/>

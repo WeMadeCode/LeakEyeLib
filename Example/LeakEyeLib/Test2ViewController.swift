@@ -22,7 +22,6 @@ class Test2ViewController: UIViewController {
         
         self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(fire), userInfo: nil, repeats: true)
         
-        // Do any additional setup after loading the view.
     }
     
     @objc func fire(){

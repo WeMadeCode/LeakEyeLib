@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
  
-
+    @IBAction func btnThreeClick(_ sender: Any) {
+        let vc = Test3ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 

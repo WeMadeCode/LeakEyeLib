@@ -12,7 +12,7 @@
 
 ## 需要
 
-最低支持iOS10
+最低支持iOS9
 
 ## 安装
 
@@ -57,7 +57,7 @@ func leakEye(leakEye:LeakEye,didCatchLeak object:NSObject) {
 ## 目前在LeakEye基础上改了啥？
 1. 修复了iOS13上的崩溃
 2. 升级到Swift5，修复一些warnings
-3. 支持iOS10+
+3. 支持iOS9+
 
 
 ## 原理
