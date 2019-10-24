@@ -19,36 +19,27 @@
 通过cocoapods可以直接安装
 
 ```ruby
-pod 'LeakEyeLib'
+pod 'LeakEyeLib', :configurations => ['Debug']
 ```
 
-## 使用
+## 如何使用
 第一步：导入框架
 
 ```swift
+#if DEBUG
 import LeakEyeLib
+#endif
 ```
 
-第二步：声明实例属性
+第二步：开启监听器
 
 ```swift
-var eye = LeakEye()
+#if DEBUG
+LeakEye.shared.open()
+#endif
 ```
 
-第三步：开启监听器
-
-```swift
-self.eye.delegate = self
-self.eye.open()
-```
-
-第四步：实现代理方法，方法中会输出可疑的泄漏对象
-
-```swift
-func leakEye(leakEye:LeakEye,didCatchLeak object:NSObject) {
-    print(object)
-}
-```
+发现有可疑对象泄漏后，会自动有Alert弹窗。
 
 ## 感谢
 本仓库是在[LeakEye](https://github.com/zixun/LeakEye)上继续维护的，由于LeakEye年久失修，原作者貌似也不在维护，可惜这么牛逼的框架没人用，所以在学习了原作者的思想之后，打算继续维护。

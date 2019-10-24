@@ -1,5 +1,5 @@
 PODS:
-  - LeakEyeLib (0.1.2)
+  - LeakEyeLib (0.1.4)
 
 DEPENDENCIES:
   - LeakEyeLib (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LeakEyeLib: 97bfb0d3001e131c759df7d39428585fcf4ae0bc
+  LeakEyeLib: 6d7a389664f5ff60eb27980053e35b3fc9e8dfea
 
 PODFILE CHECKSUM: 5ebe2ec31a652e6cfc20a4677c56434bf843e998
 

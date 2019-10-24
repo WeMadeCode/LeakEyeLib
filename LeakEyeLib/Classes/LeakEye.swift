@@ -10,13 +10,20 @@ import Foundation
 
 /// MARK: - LeakEyeDelegate
 @objc public protocol LeakEyeDelegate: NSObjectProtocol {
-    func leakEye(_ leakEye:LeakEye,didCatchLeak object:NSObject)
+    @objc optional func leakEye(_ leakEye:LeakEye,didCatchLeak object:NSObject)
 }
 
 /// MARK: - LeakEye
 @objcMembers public class LeakEye: NSObject {
-    /// 代理属性，用于输出泄漏的对象
+    
+    /// 单例对象
+    public static let shared = LeakEye()
+    
+    /// 代理属性，用于自定义输出格式
     public weak var delegate: LeakEyeDelegate?
+    
+    /// 是否使用弹窗输出，默认开启
+    public var useAlert = true
     
     /// 用于扫描的定时器
     private var timer: Timer?
@@ -28,8 +35,8 @@ import Foundation
         }
     }
 
-    /// MARK: LIFE CYCLE
-    public override init() {
+    /// 构造方法
+    private override init() {
         super.init()
         NotificationCenter.default.addObserver(self, selector: #selector(LeakEye.receive), name: NSNotification.Name.Receive, object: nil)
     }
@@ -47,10 +54,6 @@ import Foundation
         self.timer?.invalidate()
         self.timer = nil
     }
-    
-    
-
-    
 }
 
 
@@ -72,7 +75,6 @@ extension LeakEye{
                                           selector: #selector(LeakEye.scan),
                                           userInfo: nil,
                                           repeats: true)
-        
     }
     
     @objc private func scan()  {
@@ -81,6 +83,14 @@ extension LeakEye{
     
     @objc private func receive(notif:NSNotification) {
         guard let leakObj = notif.object as? NSObject else { return }
-        self.delegate?.leakEye(self, didCatchLeak: leakObj)
+        self.delegate?.leakEye?(self, didCatchLeak: leakObj)
+        let message = "发现可疑内存泄漏对象\(leakObj)"
+        if useAlert{
+            let vc = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+            vc.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true, completion: nil)
+        }else{
+            debugPrint(message)
+        }
     }
 }

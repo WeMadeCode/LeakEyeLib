@@ -33,5 +33,10 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func btnFourClick(_ sender: Any) {
+        let vc = Test4ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
 }
 
